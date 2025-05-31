@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- links -->
+  <link rel="icon" type="png" href="img/icon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <!-- Title -->
+  <title>actuMeteo recherche</title>
+</head>
+
+<body>
+  
+  <div id="screen">
+    <!-- main section -->
+    <h3>Recherche de ville</h3>
+    <!-- search -->
+    <div class="search">
+      <div class="search-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <input  class="searchinput" type="text" placeholder="recherche..." >
+    </div>
+    <!-- message -->
+    <div class="message">
+      <p>Vous avez la possibilité de rechercher par nom de ville, d'état ou de pays.</p>
+    </div>
+    <!-- error message -->
+    <div class="error-message">
+      <p>Un des emplacements spécifiés (ville, état ou pays) n'a pas été trouvé. Veuillez réessayer.</p>
+    </div>
+    <!-- weather -->
+    <div class="return">
+      <div class="box">
+        <div class="weather-box">
+          <div class="name">
+            <div class="city-name">Londres</div>
+            <div class="weather-temp">20°</div>
+          </div>
+          <div class="weather-icon"><img class="weather-img" src="img/haze.png" alt=""></div>
+        </div>
+        <!-- 1 -->
+        <div class="weather-desc">
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-wind"></i></div>
+            <div class="desc-name">Vent</div>
+            <div class="desc-info wind">15 m/s</div>
+          </div>
+
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-temperature-full"></i></div>
+            <div class="desc-name">Pression</div>
+            <div class="desc-info pressure">15 mbar</div>
+          </div>
+
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-droplet"></i></div>
+            <div class="desc-name">Humidité</div>
+            <div class="desc-info humidity">50%</div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="weather-desc">
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="desc-name">Lever de soleil</div>
+            <div class="desc-info sunrise">12:00:00</div>
+          </div>
+
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <div class="desc-name">Coucher de soleil</div>
+            <div class="desc-info sunset">12:00:00</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- nav section -->
+    <nav>
+      <ul>
+        <li><a href="index.html" title="Accueil"><i class="fa-solid fa-location-arrow"></i></a></li>
+        <li><a class="active" href="search.html" title="Recherche"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <li><a href="world.html" title="Monde"><i class="fa-solid fa-earth-americas"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+  <footer>
+  <div class="footer-content">
+    <p>© 2025 ActuMeteo. Tous droits réservés.</p>
+    <p>
+      Conçu par
+      <a href="">celine H</a>
+    </p>
+  
+  <!-- main.js -->
+  <script src="js/search.js"></script>
+</body>
+</html>

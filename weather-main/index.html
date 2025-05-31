@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links -->
+    <link rel="icon" type="png" href="img/icon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Title -->
+    <title>actuMeteo</title>
+    <meta name="description" content="Application météo" />
+  </head>
+
+  <body>
+    
+    
+    <!-- main section -->
+    
+    <div id="screen">
+      
+      <!-- city name -->
+      <div class="city-name">
+          <i class="fa-solid fa-map-pin"></i>
+          <h1 id="city-name">PARIS</h1>
+        </div>
+        <!-- weather icon -->
+        <div class="weather-icon-css">
+          <img class="weather-icon" src="./img/sun.png" alt="Weather icon: sun" />
+        </div>
+        <!-- weather details -->
+        <div class="weather-description">
+          <div class="show-metric" id="metric">10°</div>
+          <div class="weather-details">
+            <div class="weather-main" id="weather-main">soleil</div>
+            <div class="h-f">
+              <div class="show-humidity">HU: <span id="humidity">60</span></div>
+              ||
+              <div class="show-humidity">
+                RE: <span id="feels-like">60</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+    
+        <!-- Today-forecast -->
+        <div class="forcasts-box">
+          <div class="today-forecast">
+            <h4>aujourd'hui</h4>
+            <div class="weather-icon-today">
+              <img class="weather-icons" src="./img/sun.png" alt="Weather icon: sun" />
+            </div>
+            <div class="temp-today">
+              <span id="temp-min-today">10°</span><span>/ </span
+              ><span id="temp-max-today">15°</span>
+            </div>
+            <div class="weather-main-today" id="weather-main">soleil</div>
+          </div>
+
+          <!-- 5day Forecast -->
+           
+          <div class="future-forecast">
+            <h5>5 jours à venir</h5>
+            <div id="future-forecast-box"></div>
+          </div>
+        </div>
+  
+
+        <!-- nav section -->
+        <nav>
+          <ul>
+            <li>
+              <a class="active" href="index.html" title="Accueil"
+                ><i class="fa-solid fa-location-arrow"></i
+              ></a>
+            </li>
+            <li>
+              <a href="search.html" title="Rechercher"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </li>
+            <li>
+              <a href="world.html" title="Monde"><i class="fa-solid fa-earth-americas"></i></a>
+        
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+<footer>
+  <div class="footer-content">
+    <p>© 2025 ActuMeteo. Tous droits réservés.</p>
+    <p>
+      Conçu par
+      <a href="">celine H</a>
+    </p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
