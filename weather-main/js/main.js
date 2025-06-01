@@ -50,8 +50,8 @@ navigator.geolocation.getCurrentPosition(async function (position) {
             weatherImg.src = "img/snow.png";
             weatherImgs.src = "img/snow.png";
         } else if (weatherCondition === "clouds" || weatherCondition === "smoke") {
-            weatherImg.src = "img/cloud.png";
-            weatherImgs.src = "img/cloud.png";
+            weatherImg.src = "img/cloud4.png";
+            weatherImgs.src = "img/cloud4.png";
         } else if (weatherCondition === "mist" || weatherCondition === "Fog") {
             weatherImg.src = "img/mist1.png";
             weatherImgs.src = "img/mist1.png";
