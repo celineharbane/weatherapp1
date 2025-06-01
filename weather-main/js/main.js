@@ -50,8 +50,8 @@ navigator.geolocation.getCurrentPosition(async function (position) {
             weatherImg.src = "img/snow.png";
             weatherImgs.src = "img/snow.png";
         } else if (weatherCondition === "clouds" || weatherCondition === "smoke") {
-            weatherImg.src = "img/cloud4.png";
-            weatherImgs.src = "img/cloud4.png";
+            weatherImg.src = "img/15.cloud-light.png";
+            weatherImgs.src = "img/15.cloud-light.png";
         } else if (weatherCondition === "mist" || weatherCondition === "Fog") {
             weatherImg.src = "img/mist1.png";
             weatherImgs.src = "img/mist1.png";
@@ -112,7 +112,7 @@ navigator.geolocation.getCurrentPosition(async function (position) {
                         break;
                     case "clouds":
                     case "smoke":
-                        imgSrc = "img/cloud4.png";
+                        imgSrc = "img/15.cloud-light.png";
                         break;
                     case "mist":
                         imgSrc = "img/mist.png";
