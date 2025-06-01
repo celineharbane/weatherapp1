@@ -8,7 +8,7 @@ navigator.geolocation.getCurrentPosition(async function (position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         //longitude and  latitude are used to get city name
-        var map = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${apiKey}&units=metric&lang=fr`)
+        var map = await fetch (`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${apiKey}&units=metric&lang=fr`)
         var userdata = await map.json();
         let loc = userdata[0].name;
         //By using City name  we can get the weather details of that particular city from OpenWeatherMap API
@@ -112,7 +112,7 @@ navigator.geolocation.getCurrentPosition(async function (position) {
                         break;
                     case "clouds":
                     case "smoke":
-                        imgSrc = "img/cloud.png";
+                        imgSrc = "img/cloud4.png";
                         break;
                     case "mist":
                         imgSrc = "img/mist.png";
