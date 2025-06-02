@@ -255,3 +255,36 @@ body {
   flex-direction: row;
   justify-content: center;
 }
+
+
+/* TEST POPUP JOUR */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup img {
+    width: 100px;
+    margin: 10px;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+}
+

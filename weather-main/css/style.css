@@ -253,3 +253,51 @@ body {
 }
  */
 
+body.sunny {
+    background: linear-gradient(to bottom, #fbd55b, #ff9800);
+}
+
+body.rainy {
+    background: linear-gradient(to bottom, #0f2027, #203a43);
+}
+
+body.snowy {
+    background: linear-gradient(to bottom, #c0eaff, #89c9ff);
+}
+
+body.cloudy {
+    background: linear-gradient(to bottom, #d1d1d1, #737373);
+}
+
+body.thunderstorm {
+    background: linear-gradient(to bottom, #141e30, #243b55);
+}
+
+body.hazy {
+    background: linear-gradient(to bottom, #e8c07d, #c49a6c);
+}
+
+
+/* TEST CLIC SUR JOUR  */
+#details-forecast {
+    background: rgb(190, 228, 226);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#details-forecast img {
+    width: 80px;
+    margin: 10px;
+}
+
+button {
+    background:lab(34.11% -18.67 -11.59)  ;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
