@@ -36,7 +36,7 @@ async function search(city, state, country){
         data.weather[0].main === "Clouds" ||
         data.weather[0].main === "Smoke"
       ) {
-        weatherImg.src = "img/cloud4.png";
+        weatherImg.src = "img/15.cloud-light.png";
       } else if (
         data.weather[0].main === "Mist" ||
         data.weather[0].main === "Fog"

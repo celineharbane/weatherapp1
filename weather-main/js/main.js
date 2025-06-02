@@ -8,7 +8,7 @@ navigator.geolocation.getCurrentPosition(async function (position) {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         //longitude and  latitude are used to get city name
-        var map = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${apiKey}&units=metric&lang=fr`)
+        var map = await fetch (`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=5&appid=${apiKey}&units=metric&lang=fr`)
         var userdata = await map.json();
         let loc = userdata[0].name;
         //By using City name  we can get the weather details of that particular city from OpenWeatherMap API
@@ -50,8 +50,13 @@ navigator.geolocation.getCurrentPosition(async function (position) {
             weatherImg.src = "img/snow.png";
             weatherImgs.src = "img/snow.png";
         } else if (weatherCondition === "clouds" || weatherCondition === "smoke") {
+<<<<<<< HEAD
             weatherImg.src = "img/clouds.png";
             weatherImgs.src = "img/clouds.png";
+=======
+            weatherImg.src = "img/15.cloud-light.png";
+            weatherImgs.src = "img/15.cloud-light.png";
+>>>>>>> 942b4f9d9553c288e2651e540633f46119451f16
         } else if (weatherCondition === "mist" || weatherCondition === "Fog") {
             weatherImg.src = "img/mist1.png";
             weatherImgs.src = "img/mist1.png";
@@ -76,6 +81,87 @@ navigator.geolocation.getCurrentPosition(async function (position) {
                 console.error("Error fetching forecast:", error);
             });
 
+<<<<<<< HEAD
+=======
+        function displayForecast(data) {
+            const dailyForecasts = {};
+            let forecast = document.getElementById('future-forecast-box');
+            let forecastbox = "";
+
+            data.list.forEach(item => {
+                const date = item.dt_txt.split(' ')[0];
+                let dayName = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
+                let day = new Date(date).getDay();
+
+                if (!dailyForecasts[date]) {
+                    dailyForecasts[date] = {
+                        day_today: dayName[day],
+                        temperature: Math.floor(item.main.temp) + "°",
+                        description: item.weather[0].description,
+                        weatherImg: item.weather[0].main.toLowerCase()
+                    };
+                }
+            });
+
+            for (const date in dailyForecasts) {
+                let imgSrc = "";
+
+                switch (dailyForecasts[date].weatherImg) {
+                    case "rain":
+                        imgSrc = "img/rain.png";
+                        break;
+                    case "clear":
+                    case "clear sky":
+                        imgSrc = "img/sun.png";9
+                        break;
+                    case "snow":
+                        imgSrc = "img/snow.png";
+                        break;
+                    case "clouds":
+                    case "smoke":
+                        imgSrc = "img/15.cloud-light.png";
+                        break;
+                    case "mist":
+                        imgSrc = "img/mist.png";
+                        break;
+                    case "haze":
+                        imgSrc = "img/haze.png";
+                        break;
+                    case "thunderstorm":
+                        imgSrc = "img/thunderstorm.png";
+                        break;
+                    default:
+                        imgSrc = "img/sun.png";
+                }
+
+                forecastbox += `
+                <div class="weather-forecast-box">
+                <div class="day-weather">
+                <span>${dailyForecasts[date].day_today}</span>
+                </div>
+                    <div class="weather-icon-forecast">
+                        <img src="${imgSrc}" />
+                    </div>
+                    <div class="temp-weather">
+                        <span>${dailyForecasts[date].temperature}</span>
+                    </div>
+                    <div class="weather-main-forecast">${dailyForecasts[date].description}</div>
+                </div>`;
+            }
+
+            forecast.innerHTML = forecastbox;
+
+            console.log(data);
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
+},
+() => {
+    // Handle location retrieval error
+    alert("Veuillez activer votre localisation et actualiser la page");
+});
+>>>>>>> 942b4f9d9553c288e2651e540633f46119451f16
 
 //   test fonction dynamique
 function displayForecast(data) {
