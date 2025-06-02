@@ -50,13 +50,8 @@ navigator.geolocation.getCurrentPosition(async function (position) {
             weatherImg.src = "img/snow.png";
             weatherImgs.src = "img/snow.png";
         } else if (weatherCondition === "clouds" || weatherCondition === "smoke") {
-<<<<<<< HEAD
             weatherImg.src = "img/clouds.png";
             weatherImgs.src = "img/clouds.png";
-=======
-            weatherImg.src = "img/15.cloud-light.png";
-            weatherImgs.src = "img/15.cloud-light.png";
->>>>>>> 942b4f9d9553c288e2651e540633f46119451f16
         } else if (weatherCondition === "mist" || weatherCondition === "Fog") {
             weatherImg.src = "img/mist1.png";
             weatherImgs.src = "img/mist1.png";
@@ -81,8 +76,6 @@ navigator.geolocation.getCurrentPosition(async function (position) {
                 console.error("Error fetching forecast:", error);
             });
 
-<<<<<<< HEAD
-=======
         function displayForecast(data) {
             const dailyForecasts = {};
             let forecast = document.getElementById('future-forecast-box');
@@ -161,7 +154,6 @@ navigator.geolocation.getCurrentPosition(async function (position) {
     // Handle location retrieval error
     alert("Veuillez activer votre localisation et actualiser la page");
 });
->>>>>>> 942b4f9d9553c288e2651e540633f46119451f16
 
 //   test fonction dynamique
 function displayForecast(data) {
@@ -298,12 +290,5 @@ function updateBackground(weatherCondition) {
 //         console.log(`Test météo : ${condition}`);
 //     }, index * 3000); // Change toutes les 3 secondes
 // });
-    }
-    catch (error) {
-        console.error("An error occurred:", error);
-    }
-},
-() => {
-    // Handle location retrieval error
-    alert("Veuillez activer votre localisation et actualiser la page");
-});
+    
+    
